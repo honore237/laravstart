@@ -1,7 +1,7 @@
 *
 !.gitignore
 /vendor
-.idea/inspectionProfiles/
+/.idea/
 public/.well-known/
 node_modules
 

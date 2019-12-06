@@ -6,7 +6,25 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+window.Vue = require('vue')
+
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
+let routes = [
+    { path: '/dashboard', component: require('./components/Dashboard.vue').default},
+    { path: '/profile', component: require('./components/Profile.vue').default},
+]
+
+// 3. Create the router instance and pass the `routes` option
+// You can pass in additional options here, but let's
+// keep it simple for now.
+const router = new VueRouter({
+    mode: 'history',
+    routes // short for `routes: routes`
+})
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -28,5 +46,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
+    router,
     el: '#app',
 });
