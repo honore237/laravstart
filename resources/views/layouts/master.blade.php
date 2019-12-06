@@ -48,7 +48,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="{{Request::root()}}" class="brand-link">
+        <a href="{{Request::root()}}/home" class="brand-link">
             <img src="{{asset('img/logo.png')}}" alt="LaraStart Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-light">Lara Start</span>
