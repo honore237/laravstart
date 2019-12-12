@@ -13,6 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+});*/
+
+
+Route::apiResources(['users' =>  'Api\UsersController']);
+
+Route::get('profile', 'Api\UsersController@profile')->name('user.profile');
+
+Route::put('profile', 'API\UsersController@updateProfile');
